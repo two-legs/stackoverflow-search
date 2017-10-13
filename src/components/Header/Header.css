@@ -1,0 +1,11 @@
+.Header {
+  display: block;
+  width: 100%;
+  height: 50px;
+  transition: all 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.Header_extended {
+  height: 300px;
+  transition: all 200ms cubic-bezier(0.4, 0.0, 1, 1);
+}

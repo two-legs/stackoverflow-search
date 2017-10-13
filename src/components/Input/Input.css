@@ -1,0 +1,23 @@
+.Input {
+  width: 100%;
+}
+
+.Input__field {
+  width: 100%;
+  margin: 0;
+  line-height: 1.2;
+  padding: 0.7em 1em;
+  background: #fff;
+  border: 1px solid #eee;
+  transition: border-color 100ms ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.Input__field:focus {
+  border-color: #777;
+}
+
+.Input__field:focus {
+  border-color: #f48024;
+}

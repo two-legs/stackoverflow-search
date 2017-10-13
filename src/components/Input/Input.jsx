@@ -28,7 +28,7 @@ class Input extends PureComponent {
     const value = event.target.value;
 
     this.setState({ value }, () => {
-      this.props.onChange(value);
+      if (this.props.onChange) this.props.onChange(value);
     });
   };
 

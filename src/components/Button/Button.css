@@ -1,0 +1,26 @@
+.Button {
+  display: inline-block;
+  cursor: pointer;
+  min-height: 1em;
+  border: none;
+  background-color: #f48024;
+  color: #fff;
+  margin: 0 .25em 0 0;
+  padding: 0.8em 1em;
+  text-transform: uppercase;
+  line-height: 1em;
+  text-align: center;
+  transition: background-color 100ms;
+}
+
+.Button:hover {
+  background-color: #ff962c;
+}
+
+.Button:active {
+  background-color: #a65329;
+}
+
+.Button:focus {
+  outline: 0;
+}

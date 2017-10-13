@@ -1,0 +1,9 @@
+.SearchForm {
+  max-width: 700px;
+  display: table;
+  box-sizing: border-box;
+}
+
+.SearchForm__button {
+  display: table-cell;
+}
