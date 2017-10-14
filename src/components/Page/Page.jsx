@@ -1,5 +1,5 @@
 import React from 'react';
-import Spinner from '../../components/Spinner/Spinner';
+import Spinner from '../Spinner/Spinner';
 
 import './Page.css';
 

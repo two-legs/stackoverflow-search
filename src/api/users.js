@@ -1,6 +1,6 @@
 import qs from 'qs';
-import fetch from 'whatwg-fetch';
-import API_URL from './config';
+import { API_URL } from './config';
+import keysToCamelCase from '../utils/keysToCamelCase';;
 
 const defaultParams = {
   pagesize: 10,
@@ -15,7 +15,8 @@ async function query(url, params, defaultParams) {
     throw new Error(response.error_message || 'Bad server request');
   }
 
-  return response.json();
+  const result = await response.json();
+  return keysToCamelCase(result);
 }
 
 export async function usersQuestions(userUrl, params) {

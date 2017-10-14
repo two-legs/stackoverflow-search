@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import './Tag.css';
 
-const Tag = ({ children, onClick}) => (
-  <span className="Tag" onClick={onClick}>
-    {children}
+const Tag = ({ tag, onClick}) => (
+  <span className="Tag" onClick={event => onClick(tag)}>
+    {tag}
   </span>
 );
 

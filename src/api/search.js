@@ -1,11 +1,12 @@
 import qs from 'qs';
-import fetch from 'whatwg-fetch';
-import API_URL from './config';
+import { API_URL } from './config';
+import keysToCamelCase from '../utils/keysToCamelCase';
 
 const defaultSearchParams = {
-  pagesize: 100,
+  pagesize: 50,
   order: 'desc',
   sort: 'activity',
+  site: 'stackoverflow',
 };
 
 export default async function search(params) {
@@ -14,6 +15,6 @@ export default async function search(params) {
   if (response.status > 400 && response.status < 600) {
     throw new Error(response.error_message || 'Bad server request');
   }
-
-  return response.json();
+  const result = await response.json();
+  return keysToCamelCase(result);
 }

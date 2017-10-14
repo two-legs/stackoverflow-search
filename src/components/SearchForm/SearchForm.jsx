@@ -8,14 +8,22 @@ import './SearchForm.css';
 
 const SearchForm = props => (
   <div className="SearchForm">
-    <Input placeholder="Enter search query" value={props.value} className="SearchForm__input"/>
-    <div className="SearchForm__button"><Button onClick={props.onClick}>Search</Button></div>
+    <Input
+      placeholder="Enter search query"
+      className="SearchForm__input"
+      value={props.value}
+      onChange={props.onQueryChange}
+    />
+    <div className="SearchForm__button">
+      <Button onClick={() => props.onClick(props.value)}>Search</Button>
+    </div>
   </div>
 );
 
 SearchForm.propTypes = {
   value: PropTypes.string,
   onClick: PropTypes.func,
+  onQueryChange: PropTypes.func,
 };
 
 export default SearchForm;

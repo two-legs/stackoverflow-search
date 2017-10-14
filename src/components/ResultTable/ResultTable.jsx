@@ -10,7 +10,13 @@ const ResultTable = props => (
   <div className="ResultTable">
     <Table>
       <Rows>
-        {props.questions.map((question, index) => <QuestionRow {...question} key={index} />)}
+        {props.questions.map((question, index) => (
+          <QuestionRow
+            {...question}
+            key={index}
+            onTagClick={props.onTagClick}
+          />
+        ))}
       </Rows>
     </Table>
   </div>

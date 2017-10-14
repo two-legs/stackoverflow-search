@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
+
+import { Provider } from 'react-redux';
+import store from '../../store';
 
 import './App.css';
 
 import SearchHeader from '../SearchHeader/SearchHeader';
+import ResultPage from '../ResultPage/ResultPage';
 import ResultTable from '../../components/ResultTable/ResultTable';
-import Page from '../Page/Page';
+import Page from '../../components/Page/Page';
 
 import PreviewPane from '../../components/PreviewPane/PreviewPane';
 
@@ -47,15 +51,20 @@ const data = {
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Route path="/" component={SearchHeader} />
-        <Link to="/">Back</Link>
-        <Link to="/test">Test link</Link>
-        <ResultTable questions={data.questions} />
-        <Page isLoading />
+      <Provider store={store}>
+        <div className="App">
+          <Route path="/" component={SearchHeader} />
+          <Link to="/">Back</Link>
+          <Link to="/search/redux">Test link</Link>
+          {/*<ResultTable questions={data.questions} />*/}
+          {/*<Page isLoading />*/}
 
-        <PreviewPane />
-      </div>
+          {/*<PreviewPane />*/}
+          <Switch>
+            <Route path="/search/:query" component={ResultPage}/>
+          </Switch>
+        </div>
+      </Provider>
     );
   }
 }
