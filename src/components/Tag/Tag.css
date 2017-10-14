@@ -1,0 +1,11 @@
+.Tag {
+  display: inline-block;
+  margin-left: 0.2em;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 100ms;
+}
+
+.Tag:hover {
+  color: #ff962c;
+}

@@ -1,0 +1,22 @@
+.PreviewPane {
+  position: fixed;
+  max-height: 700px;
+  height: 100%;
+  bottom: 0;
+  left: 50%;
+  background: #fff;
+  max-width: 1000px;
+  width: 100%;
+  transform: translateX(-50%);
+  animation: showPane 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+  box-shadow: 0 3px 6px rgba(111, 111, 111, 0.16), 0 3px 6px rgba(104, 104, 104, 0.23);
+}
+
+@keyframes showPane {
+  from {
+    transform: translate(-50%, 100%);
+  }
+  to {
+    transform: translate(-50%, 0);
+  }
+}

@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
+import cn from 'classnames';
 import './Input.css';
 
 class Input extends PureComponent {
@@ -10,12 +11,14 @@ class Input extends PureComponent {
     onEnter: PropTypes.func,
     disabled: PropTypes.bool,
     placeholder: PropTypes.string,
+    className: PropTypes.string,
   };
 
   constructor(props) {
     super(props);
 
-    this.state = { value: this.props.value };
+    const { value } = props;
+    this.state = { value: value || '' };
   }
 
   componentWillReceiveProps(nextProps) {
@@ -40,11 +43,11 @@ class Input extends PureComponent {
 
   render() {
     return (
-      <div className="Input">
+      <div className={cn('Input', this.props.className)}>
         <input
+          value={this.state.value}
           type="text"
           className="Input__field"
-          value={this.state.value}
           onChange={this.handleChange}
           disabled={this.props.disabled}
           placeholder={this.props.placeholder}

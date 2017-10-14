@@ -4,12 +4,14 @@ import PropTypes from 'prop-types';
 import { Row } from '../../Table';
 import Tag from '../../Tag/Tag';
 
+import './QuestionRow.css';
+
 const QuestionRow = props => (
   <Row>
-    <span>{props.author}</span>
-    <span>{props.title}</span>
-    <span>{props.answerCount}</span>
-    <span>{props.tags.map((tag, index) => <Tag key={index}>{tag}</Tag>)}</span>
+    <div>{props.author}</div>
+    <div className="QuestionRow__title">{props.title}</div>
+    <div>{props.answerCount}</div>
+    <div>{props.tags.map((tag, index) => <Tag key={index}>{tag}</Tag>)}</div>
   </Row>
 );
 

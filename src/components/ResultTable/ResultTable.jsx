@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import Table, { Rows } from '../Table';
 import QuestionRow from './QuestionRow/QuestionRow';
 
+import './ResultTable.css';
+
 const ResultTable = props => (
   <div className="ResultTable">
     <Table>

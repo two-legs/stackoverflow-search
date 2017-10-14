@@ -1,0 +1,13 @@
+.Row {
+  display: table-row;
+}
+
+.Row:nth-child(odd) {
+  background-color: #f3f3f3;
+}
+
+.Row__item {
+  padding: 0.8em 1em;
+  box-sizing: border-box;
+  max-width: 700px;
+}

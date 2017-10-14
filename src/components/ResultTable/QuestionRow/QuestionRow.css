@@ -1,0 +1,5 @@
+.QuestionRow {}
+
+.QuestionRow__title {
+  text-align: left;
+}

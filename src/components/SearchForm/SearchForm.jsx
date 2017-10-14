@@ -8,7 +8,7 @@ import './SearchForm.css';
 
 const SearchForm = props => (
   <div className="SearchForm">
-    <Input placeholder="Enter search query" value={props.value}/>
+    <Input placeholder="Enter search query" value={props.value} className="SearchForm__input"/>
     <div className="SearchForm__button"><Button onClick={props.onClick}>Search</Button></div>
   </div>
 );
