@@ -1,28 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2fd77301-343f-46c9-ab27-41e8215efc4b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/close.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Icon/Icon.jsx" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/logo.svg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Header/Header.css" afterPath="$PROJECT_DIR$/src/components/Header/Header.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Page/Page.css" afterPath="$PROJECT_DIR$/src/components/Page/Page.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Page/Page.jsx" afterPath="$PROJECT_DIR$/src/components/Page/Page.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Panel/Panel.css" afterPath="$PROJECT_DIR$/src/components/Panel/Panel.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/PreviewPane/PreviewPane.css" afterPath="$PROJECT_DIR$/src/components/PreviewPane/PreviewPane.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/PreviewPane/PreviewPane.jsx" afterPath="$PROJECT_DIR$/src/components/PreviewPane/PreviewPane.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/ResultTable/QuestionRow/QuestionRow.jsx" afterPath="$PROJECT_DIR$/src/components/ResultTable/QuestionRow/QuestionRow.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/ResultTable/ResultTable.jsx" afterPath="$PROJECT_DIR$/src/components/ResultTable/ResultTable.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Table/HeaderRow/HeaderRow.jsx" afterPath="$PROJECT_DIR$/src/components/Table/HeaderRow/HeaderRow.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Table/Row/Row.jsx" afterPath="$PROJECT_DIR$/src/components/Table/Row/Row.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Table/Rows/Rows.jsx" afterPath="$PROJECT_DIR$/src/components/Table/Rows/Rows.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Table/Table.jsx" afterPath="$PROJECT_DIR$/src/components/Table/Table.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/App/App.jsx" afterPath="$PROJECT_DIR$/src/containers/App/App.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/ResultsPreview/ResultsPreview.jsx" afterPath="$PROJECT_DIR$/src/containers/ResultsPreview/ResultsPreview.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/SearchHeader/SearchHeader.css" afterPath="$PROJECT_DIR$/src/containers/SearchHeader/SearchHeader.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/SearchHeader/SearchHeader.jsx" afterPath="$PROJECT_DIR$/src/containers/SearchHeader/SearchHeader.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/preview.js" afterPath="$PROJECT_DIR$/src/reducers/preview.js" />
+    <list default="true" id="2fd77301-343f-46c9-ab27-41e8215efc4b" name="Default" comment="Add animations and styles">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/stackoverflow-search.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -51,16 +34,6 @@
                     <element signature="e#1406#1464#0" expanded="false" />
                     <element signature="e#1503#1529#0" expanded="false" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Table.jsx" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/Table/Table.jsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -129,11 +102,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="PreviewPane.css" pinned="false" current-in-tab="true">
+          <file leaf-file-name="PreviewPane.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/PreviewPane/PreviewPane.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
+                <state relative-caret-position="221">
                   <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="357">
+                  <caret line="21" column="15" lean-forward="true" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
                   <folding />
                 </state>
               </provider>
@@ -276,7 +259,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/utils/toCamelCase.js" />
         <option value="$PROJECT_DIR$/src/utils/keysToCamelCase.js" />
         <option value="$PROJECT_DIR$/src/containers/Owner/Owner.jsx" />
@@ -327,6 +309,7 @@
         <option value="$PROJECT_DIR$/src/components/Icon/Icon.jsx" />
         <option value="$PROJECT_DIR$/src/components/Panel/Panel.css" />
         <option value="$PROJECT_DIR$/src/components/PreviewPane/PreviewPane.css" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -351,7 +334,7 @@
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
-      <showMembers />
+      <showMembers ProjectPane="false" />
       <showModules />
       <showLibraryContents />
       <hideEmptyPackages />
@@ -465,7 +448,7 @@
       <workItem from="1507827001746" duration="7701000" />
       <workItem from="1507914538185" duration="7008000" />
       <workItem from="1507969367715" duration="33116000" />
-      <workItem from="1508062542365" duration="21284000" />
+      <workItem from="1508062542365" duration="21674000" />
     </task>
     <task id="LOCAL-00001" summary="Project init">
       <created>1507571179167</created>
@@ -516,11 +499,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508078220975</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add animations and styles">
+      <created>1508095138758</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1508095138758</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86708000" />
+    <option name="totallyTimeSpent" value="87098000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -535,14 +525,14 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14436248" sideWeight="0.5968436" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14436248" sideWeight="0.59643435" order="3" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14436248" sideWeight="0.40315637" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2423913" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14436248" sideWeight="0.40356565" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2423913" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -568,7 +558,8 @@
     <MESSAGE value="Add reducers and actions" />
     <MESSAGE value="Basic components" />
     <MESSAGE value="Transitions for page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Transitions for page" />
+    <MESSAGE value="Add animations and styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add animations and styles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -577,14 +568,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/ResultTable/QuestionRow/QuestionRow.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ResultTable/ResultTable.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1030,8 +1013,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/PreviewPane/PreviewPane.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="221">
           <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="15" lean-forward="true" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
           <folding />
         </state>
       </provider>
