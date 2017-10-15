@@ -3,14 +3,14 @@
 }
 
 .fadeTranslate-enter {
-  opacity: 0;
-  transform: translate(0, -3vh);
-}
+   opacity: 0;
+   transform: translate(0, -3vh);
+ }
 
 .fadeTranslate-enter.fadeTranslate-enter-active {
   opacity: 1;
   transform: translate(0, 0);
-  transition: opacity 500ms ease-in 500ms, transform 500ms ease-in-out 500ms;
+  transition: opacity 300ms ease-in 300ms, transform 300ms ease-in-out 300ms;
 }
 
 .fadeTranslate-exit {
@@ -20,6 +20,28 @@
 
 .fadeTranslate-exit.fadeTranslate-exit-active {
   opacity: 0;
-  transform: translate(0, 3vh);
-  transition: opacity 300ms ease-in, transform 300ms ease-in-out;
+  transform: scaleY(0);
+  transition: opacity 100ms ease-in, transform 100ms ease-in-out;
+}
+
+.scale-enter {
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+.scale-enter.scale-enter-active {
+  opacity: 1;
+  transform: scaleY(1);
+  transition: opacity 100ms ease-in 500ms, transform 100ms ease-in-out 500ms;
+}
+
+.scale-exit {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.scale-exit.scale-exit-active {
+  opacity: 0;
+  transform: scaleY(0);
+  transition: opacity 100ms ease-in, transform 100ms ease-in-out;
 }

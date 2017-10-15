@@ -2,11 +2,13 @@ import React from 'react';
 import Panel from '../Panel/Panel';
 
 import './PreviewPane.css';
+import Icon from "../Icon/Icon";
 
-const PreviewPane = ({ children, onClose }) => (
+const PreviewPane = ({ title, children, onClose }) => (
   <div className="PreviewPane">
     <Panel>
-      <span onClick={onClose} className="PreviewPane__close-link">Close</span>
+      <Icon onClick={onClose} name="close" className="PreviewPane__close-link" />
+      <h2 className="PreviewPane__title">{title}</h2>
     </Panel>
     <div className="PreviewPane__content">
       {children}

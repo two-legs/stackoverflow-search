@@ -7,25 +7,27 @@ import './Page.css';
 const Fade = ({ children, ...props }) => (
   <CSSTransition
     {...props}
-    timeout={5000}
+    timeout={1000}
     classNames="fadeTranslate"
     mountOnEnter
     unmountOnExit
   >
-    <div>
-      {children}
-    </div>
+    {children}
   </CSSTransition>
 );
 
 const Page = ({ isLoading, children }) => (
   <div className="Page">
-    <Fade in={isLoading}>
+    {isLoading &&
       <div className="Page__spinner">
-        <Spinner />
+        <Spinner/>
+      </div>
+    }
+    <Fade in={!isLoading}>
+      <div>
+        {!isLoading ? children : null}
       </div>
     </Fade>
-    <Fade in={!isLoading}>{children}</Fade>
   </div>
 );
 

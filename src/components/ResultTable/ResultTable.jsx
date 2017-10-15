@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Table, { Rows, HeaderRow } from '../Table';
 import QuestionRow from './QuestionRow/QuestionRow';

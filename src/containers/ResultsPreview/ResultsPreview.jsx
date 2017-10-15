@@ -9,7 +9,7 @@ import { closePreview } from '../../actions/index';
 const ResultsPreview = props => (
   <div>
     {props.isOpened
-      ? <PreviewPane onClose={props.onPreviewClose}>
+      ? <PreviewPane onClose={props.onPreviewClose} title={props.title}>
         <Page isLoading={props.isLoading}>
           <ResultTable
             questions={props.questions}
@@ -26,6 +26,7 @@ const mapStateToProps = state => ({
   isOpened: state.preview.isOpened,
   questions: state.preview.results,
   isLoading: state.preview.fetchStatus === 'LOADING',
+  title: state.preview.title,
 });
 
 const mapDispatchToProps = dispatch => ({

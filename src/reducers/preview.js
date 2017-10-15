@@ -12,6 +12,9 @@ const initialState = {
   isOpened: false,
 };
 
+const getTitleByType = (type, query) => {
+  return type === 'tag' ? `Questions by tag "${query}"` : `Questions from ${query.displayName}`;
+};
 
 const preview = (state = initialState, action) => {
   switch (action.type) {
@@ -21,6 +24,7 @@ const preview = (state = initialState, action) => {
       return {
         ...state,
         ...action.payload,
+        title: getTitleByType(action.payload.type, action.payload.query),
         isOpened: true,
         fetchStatus: 'LOADING',
       };
