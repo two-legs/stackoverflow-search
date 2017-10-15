@@ -8,9 +8,9 @@ export const PREVIEW_RESULTS_FETCH_SUCCESS = 'PREVIEW_RESULTS_FETCH_SUCCESS';
 export const PREVIEW_RESULTS_FETCH_FAILURE = 'PREVIEW_RESULTS_FETCH_FAILURE';
 export const PREVIEW_CLOSE = 'PREVIEW_CLOSE';
 
-export const ANSWERS_FETCH = 'ANSWERS_FETCH';
-export const ANSWERS_FETCH_SUCCESS = 'ANSWERS_FETCH_SUCCESS';
-export const ANSWERS_FETCH_FAILURE = 'ANSWERS_FETCH_FAILURE';
+export const QUESTION_FETCH = 'QUESTION_FETCH';
+export const QUESTION_FETCH_SUCCESS = 'QUESTION_FETCH_SUCCESS';
+export const QUESTION_FETCH_FAILURE = 'QUESTION_FETCH_FAILURE';
 
 export const setQuery = query => ({
   type: SEARCH_QUERY_SET,
@@ -49,4 +49,19 @@ export const fetchPreviewResultsFailure = err => ({
 
 export const closePreview = () => ({
   type: PREVIEW_CLOSE,
+});
+
+export const fetchQuestion = id => ({
+  type: QUESTION_FETCH,
+  payload: id,
+});
+
+export const fetchQuestionSuccess = result => ({
+  type: QUESTION_FETCH_SUCCESS,
+  payload: result,
+});
+
+export const fetchQuestionFailure = err => ({
+  type: QUESTION_FETCH_FAILURE,
+  payload: err,
 });

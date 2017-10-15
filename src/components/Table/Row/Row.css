@@ -1,18 +1,20 @@
 .Row {
   display: table-row;
   transition: all 0.1s;
-}
-
-.Row:nth-child(odd) {
-  background-color: #f3f3f3;
+  border-top: solid 1px #eee;
+  border-bottom: solid 1px #eee;
 }
 
 .Row:hover {
-  background-color: #d9f8ff;
+  background-color: #f3f3f3;
 }
 
 .Row__item {
   padding: 0.8em 1em;
   box-sizing: border-box;
   max-width: 700px;
+}
+
+.Row_clickable {
+  cursor: pointer;
 }

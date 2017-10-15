@@ -19,6 +19,10 @@
   max-height: 620px;
 }
 
+.PreviewPane__close-link {
+  cursor: pointer;
+}
+
 @keyframes showPane {
   from {
     transform: translate(-50%, 100%);

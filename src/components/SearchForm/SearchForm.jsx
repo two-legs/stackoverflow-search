@@ -13,6 +13,7 @@ const SearchForm = props => (
       className="SearchForm__input"
       value={props.value}
       onChange={props.onQueryChange}
+      onEnter={props.onClick}
     />
     <div className="SearchForm__button">
       <Button onClick={() => props.onClick(props.value)}>Search</Button>

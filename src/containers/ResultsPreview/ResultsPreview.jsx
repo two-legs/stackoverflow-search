@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import Page from '../../components/Page/Page';
-import ResultTable from '../../components/ResultTable/ResultTable';
+import ResultTable from '../ResultTableConnected/ResultTableConnected';
 import PreviewPane from '../../components/PreviewPane/PreviewPane';
-import { getQuestionsByTag } from '../../actions/search';
+import { closePreview } from '../../actions/index';
 
 const ResultsPreview = props => (
   <div>
@@ -13,7 +13,7 @@ const ResultsPreview = props => (
         <Page isLoading={props.isLoading}>
           <ResultTable
             questions={props.questions}
-            onTagClick={props.onTagClick}
+            history={props.history}
           />
         </Page>
       </PreviewPane>
@@ -29,7 +29,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onTagClick: tag => dispatch(getQuestionsByTag(tag)),
+  onPreviewClose: () => dispatch(closePreview()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ResultsPreview);

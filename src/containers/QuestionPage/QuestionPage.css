@@ -1,0 +1,6 @@
+.QuestionPage {}
+
+.QuestionPage__content {
+  margin: 20px auto;
+  max-width: 900px;
+}

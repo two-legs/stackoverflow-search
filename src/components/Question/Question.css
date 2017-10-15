@@ -1,0 +1,36 @@
+.Question {
+  text-align: left;
+}
+
+.Question__title {
+  font-weight: normal;
+  font-size: 25px;
+  margin-top: 1.5em;
+}
+
+.Question__author {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.Question__body {
+  margin: 10px 0 20px;
+  padding: 10px 0;
+}
+.Question__body pre {
+  padding: 10px 20px;
+  background: #eee;
+}
+
+.Question__answer-count {
+  border-bottom: solid 1px #eee;
+  border-top: solid 1px #eee;
+  padding: 20px 0;
+}
+
+.Question__answer {
+  margin-top: 20px;
+  border: solid 1px #eee;
+  padding: 20px;
+  box-shadow: 0 3px 6px rgba(111, 111, 111, 0.16), 0 3px 6px rgba(104, 104, 104, 0.23);
+}

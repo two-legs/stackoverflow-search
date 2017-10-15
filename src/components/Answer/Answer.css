@@ -1,0 +1,15 @@
+.Answer {
+  font-size: 14px;
+}
+
+.Answer__author {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.Answer__body {}
+.Answer__body pre {
+  padding: 10px 20px;
+  background: #eee;
+  font-size: 12px;
+}

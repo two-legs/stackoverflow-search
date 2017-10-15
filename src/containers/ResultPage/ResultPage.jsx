@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
-import { getQuestionsByTag, search } from '../../actions/search';
+import { search } from '../../actions/apiActions';
 
 import Page from '../../components/Page/Page';
-import ResultTable from '../../components/ResultTable/ResultTable';
+import ResultTable from '../ResultTableConnected/ResultTableConnected';
 import ResultPreview from '../ResultsPreview/ResultsPreview';
 
 class ResultPage extends PureComponent {
@@ -27,16 +27,16 @@ class ResultPage extends PureComponent {
     const {
       isLoading,
       questions,
-      onTagClick,
+      history,
     } = this.props;
 
     return (
       <Page isLoading={isLoading}>
         <ResultTable
           questions={questions}
-          onTagClick={onTagClick}
+          history={history}
         />
-        <ResultPreview />
+        <ResultPreview history={history} />
       </Page>
     );
   }
@@ -49,7 +49,6 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   onFetch: query => dispatch(search(query)),
-  onTagClick: tag => dispatch(getQuestionsByTag(tag)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ResultPage);

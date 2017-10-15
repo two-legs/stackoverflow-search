@@ -1,0 +1,10 @@
+.HeaderRow {
+
+}
+
+.HeaderRow__item {
+  font-weight: bold;
+  padding: 0.8em 1em;
+  box-sizing: border-box;
+  max-width: 700px;
+}
