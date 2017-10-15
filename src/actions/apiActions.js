@@ -18,7 +18,7 @@ export const search = query => async dispatch => {
       const result = await searchFetch({ intitle: query });
       dispatch(fetchSearchResultsSuccess(result.items));
     } catch (err) {
-      dispatch(fetchSearchResultsFailure(err));
+      dispatch(fetchSearchResultsFailure(err.message));
     }
   }
 };
@@ -30,7 +30,7 @@ export const getQuestionsByTag = tag => async dispatch => {
       const result = await searchFetch({ tagged: tag });
       dispatch(fetchPreviewResultsSuccess(result.items));
     } catch (err) {
-      dispatch(fetchPreviewResultsFailure(err));
+      dispatch(fetchPreviewResultsFailure(err.message));
     }
   }
 };
@@ -42,7 +42,7 @@ export const getQuestionsByAuthor = author => async dispatch => {
       const result = await usersFetch(author.userId).questions();
       dispatch(fetchPreviewResultsSuccess(result.items));
     } catch (err) {
-      dispatch(fetchPreviewResultsFailure(err));
+      dispatch(fetchPreviewResultsFailure(err.message));
     }
   }
 };

@@ -18,14 +18,15 @@ class Table extends PureComponent {
       onAuthorClick,
     } = this.props;
 
-    return (
+    return questions.length > 0
+    ? (
       <ResultTable
         questions={questions}
         onTagClick={onTagClick}
         onAuthorClick={onAuthorClick}
         onRowClick={this.handleRowClick}
       />
-    )
+    ) : null;
   }
 }
 

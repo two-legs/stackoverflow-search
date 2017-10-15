@@ -12,8 +12,9 @@ const defaultParams = {
 async function query(url, params, defaultParams) {
   const searchParams = { ...defaultParams, ...params };
   const response = await fetch(`${url}?${qs.stringify(searchParams)}`);
-  if (response.status > 400 && response.status < 600) {
-    throw new Error(response.error_message || 'Bad server request');
+  if (response.status >= 400 && response.status < 600) {
+    const error = await  response.json();
+    throw new Error(error.error_message || 'Bad server request');
   }
 
   const result = await response.json();
