@@ -2,10 +2,12 @@ export const SEARCH_QUERY_SET ='SEARCH_QUERY_SET';
 export const SEARCH_RESULTS_FETCH = 'SEARCH_RESULTS_FETCH';
 export const SEARCH_RESULTS_FETCH_SUCCESS = 'SEARCH_RESULTS_FETCH_SUCCESS';
 export const SEARCH_RESULTS_FETCH_FAILURE = 'SEARCH_RESULTS_FETCH_FAILURE';
+export const SEARCH_RESULTS_TOGGLE_SORT = 'SEARCH_RESULTS_TOGGLE_SORT';
 
 export const PREVIEW_RESULTS_FETCH = 'PREVIEW_RESULTS_FETCH';
 export const PREVIEW_RESULTS_FETCH_SUCCESS = 'PREVIEW_RESULTS_FETCH_SUCCESS';
 export const PREVIEW_RESULTS_FETCH_FAILURE = 'PREVIEW_RESULTS_FETCH_FAILURE';
+export const PREVIEW_RESULTS_TOGGLE_SORT ='PREVIEW_RESULTS_TOGGLE_SORT';
 export const PREVIEW_CLOSE = 'PREVIEW_CLOSE';
 
 export const QUESTION_FETCH = 'QUESTION_FETCH';
@@ -32,6 +34,11 @@ export const fetchSearchResultsFailure = err => ({
   payload: err,
 });
 
+export const sortSearchResults = field => ({
+  type: SEARCH_RESULTS_TOGGLE_SORT,
+  payload: field,
+});
+
 export const fetchPreviewResults = (type, query) => ({
   type: PREVIEW_RESULTS_FETCH,
   payload: { type, query }
@@ -45,6 +52,11 @@ export const fetchPreviewResultsSuccess = results => ({
 export const fetchPreviewResultsFailure = err => ({
   type: PREVIEW_RESULTS_FETCH_FAILURE,
   payload: err,
+});
+
+export const sortPreviewResults = field => ({
+  type: PREVIEW_RESULTS_TOGGLE_SORT,
+  payload: field,
 });
 
 export const closePreview = () => ({

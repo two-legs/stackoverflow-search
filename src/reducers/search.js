@@ -5,10 +5,14 @@ import {
   SEARCH_RESULTS_FETCH_FAILURE,
 } from '../actions';
 
+import { sort, toggleSort} from './sort';
+import {SEARCH_RESULTS_TOGGLE_SORT} from "../actions/index";
+
 const initialState = {
   query: '',
   results: [],
   fetchStatus: 'SUCCESS',
+  sort: { field: '', order: 'desc' },
 };
 
 
@@ -25,7 +29,7 @@ const search = (state = initialState, action) => {
     case SEARCH_RESULTS_FETCH_SUCCESS:
       return {
         ...state,
-        results: action.payload,
+        results: sort(action.payload, state.sort),
         fetchStatus: 'SUCCESS',
       };
     case SEARCH_RESULTS_FETCH_FAILURE:
@@ -33,6 +37,11 @@ const search = (state = initialState, action) => {
         ...state,
         results: [],
         fetchStatus: 'FAILURE',
+      };
+    case SEARCH_RESULTS_TOGGLE_SORT:
+      return {
+        ...state,
+        ...toggleSort(state, action.payload),
       };
     default:
       return state;

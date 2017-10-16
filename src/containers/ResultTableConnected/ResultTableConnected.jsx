@@ -14,25 +14,30 @@ class Table extends PureComponent {
   render() {
     const {
       questions,
+      headers,
       onTagClick,
       onAuthorClick,
+      ...props,
     } = this.props;
 
     return questions.length > 0
     ? (
       <ResultTable
+        headers={headers}
         questions={questions}
         onTagClick={onTagClick}
         onAuthorClick={onAuthorClick}
         onRowClick={this.handleRowClick}
+        {...props}
       />
-    ) : null;
-  }
+    ) : null;  }
 }
+
+const mapStateToProps = state => ({ headers: state.headers });
 
 const mapDispatchToProps = dispatch => ({
   onTagClick: tag => dispatch(getQuestionsByTag(tag)),
   onAuthorClick: author => dispatch(getQuestionsByAuthor(author)),
 });
 
-export default connect(null, mapDispatchToProps)(Table);
+export default connect(mapStateToProps, mapDispatchToProps)(Table);

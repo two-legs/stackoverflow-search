@@ -4,7 +4,10 @@ import {
   fetchSearchResultsFailure,
   fetchPreviewResults,
   fetchPreviewResultsSuccess,
-  fetchPreviewResultsFailure, fetchQuestion, fetchQuestionFailure, fetchQuestionSuccess,
+  fetchPreviewResultsFailure,
+  fetchQuestion,
+  fetchQuestionFailure,
+  fetchQuestionSuccess,
 } from './index';
 
 import searchFetch from '../api/search';

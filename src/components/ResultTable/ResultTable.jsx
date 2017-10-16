@@ -2,6 +2,7 @@ import React from 'react';
 
 import Table, { Rows, HeaderRow } from '../Table';
 import QuestionRow from './QuestionRow/QuestionRow';
+import SortingHeader from '../Table/SortingHeader/SortingHeader';
 
 import './ResultTable.css';
 
@@ -9,10 +10,16 @@ const ResultTable = props => (
   <div className="ResultTable">
     <Table>
       <HeaderRow>
-        <span>Author</span>
-        <span>Title</span>
-        <span>Answers</span>
-        <span>Tags</span>
+        {props.headers.map(({field, caption}) => (
+          <SortingHeader
+            field={field}
+            key={field}
+            order={field === props.sort.field ? props.sort.order : null}
+            onSortChange={props.onSortChange}
+          >
+            {caption}
+          </SortingHeader>
+        ))}
       </HeaderRow>
       <Rows>
         {props.questions.map((question, index) => (
