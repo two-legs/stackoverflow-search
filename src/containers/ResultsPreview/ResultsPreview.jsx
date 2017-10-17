@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Page from '../../components/Page/Page';
 import ResultTable from '../ResultTableConnected/ResultTableConnected';
 import PreviewPane from '../../components/PreviewPane/PreviewPane';
-import { closePreview } from '../../actions/index';
+import {closePreview, sortPreviewResults} from '../../actions/index';
 
 const ResultsPreview = props => (
   <div>
@@ -12,8 +12,11 @@ const ResultsPreview = props => (
       ? <PreviewPane onClose={props.onPreviewClose} title={props.title}>
         <Page isLoading={props.isLoading}>
           <ResultTable
+            name="preview"
             questions={props.questions}
             history={props.history}
+            onSortChange={props.onSortChange}
+            sort={props.sort}
           />
         </Page>
       </PreviewPane>
@@ -27,10 +30,12 @@ const mapStateToProps = state => ({
   questions: state.preview.results,
   isLoading: state.preview.fetchStatus === 'LOADING',
   title: state.preview.title,
+  sort: state.preview.sort,
 });
 
 const mapDispatchToProps = dispatch => ({
   onPreviewClose: () => dispatch(closePreview()),
+  onSortChange: field => dispatch(sortPreviewResults(field)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ResultsPreview);

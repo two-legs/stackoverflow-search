@@ -5,7 +5,7 @@
   border-bottom: solid 1px #eee;
 }
 
-.Row:hover {
+.Row_active {
   background-color: #f3f3f3;
 }
 

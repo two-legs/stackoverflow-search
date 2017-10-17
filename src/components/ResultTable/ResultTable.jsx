@@ -29,6 +29,7 @@ const ResultTable = props => (
             onTagClick={props.onTagClick}
             onAuthorClick={props.onAuthorClick}
             onClick={() => props.onRowClick({ ...question })}
+            isActive={index === props.activeIndex}
           />
         ))}
       </Rows>

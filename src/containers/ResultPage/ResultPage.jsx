@@ -5,7 +5,7 @@ import { search } from '../../actions/apiActions';
 import Page from '../../components/Page/Page';
 import ResultTable from '../ResultTableConnected/ResultTableConnected';
 import ResultPreview from '../ResultsPreview/ResultsPreview';
-import {sortSearchResults} from "../../actions/index";
+import {sortSearchResults} from '../../actions/index';
 
 class ResultPage extends PureComponent {
   componentDidMount() {
@@ -36,6 +36,7 @@ class ResultPage extends PureComponent {
     return (
       <Page isLoading={isLoading}>
         <ResultTable
+          name="results"
           questions={questions}
           history={history}
           onSortChange={onSortChange}
@@ -55,7 +56,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   onFetch: query => dispatch(search(query)),
-  onSortChange: field => dispatch(sortSearchResults(field))
+  onSortChange: field => dispatch(sortSearchResults(field)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ResultPage);

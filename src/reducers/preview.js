@@ -3,13 +3,16 @@ import {
   PREVIEW_RESULTS_FETCH,
   PREVIEW_RESULTS_FETCH_SUCCESS,
   PREVIEW_RESULTS_FETCH_FAILURE,
+  PREVIEW_RESULTS_TOGGLE_SORT,
 } from '../actions';
+import {toggleSort} from './sort';
 
 const initialState = {
   type: '',
   results: [],
   fetchStatus: 'SUCCESS',
   isOpened: false,
+  sort: { field: '', order: 'desc' },
 };
 
 const getTitleByType = (type, query) => {
@@ -40,6 +43,11 @@ const preview = (state = initialState, action) => {
         results: [],
         isOpened: false,
         fetchStatus: 'FAILURE',
+      };
+    case PREVIEW_RESULTS_TOGGLE_SORT:
+      return {
+        ...state,
+        ...toggleSort(state, action.payload),
       };
     default:
       return state;

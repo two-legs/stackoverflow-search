@@ -14,6 +14,9 @@ export const QUESTION_FETCH = 'QUESTION_FETCH';
 export const QUESTION_FETCH_SUCCESS = 'QUESTION_FETCH_SUCCESS';
 export const QUESTION_FETCH_FAILURE = 'QUESTION_FETCH_FAILURE';
 
+export const NAVIGATE_ROW_NEXT = 'NAVIGATE_ROW_NEXT';
+export const NAVIGATE_ROW_PREV = 'NAVIGATE_ROW_PREV';
+
 export const setQuery = query => ({
   type: SEARCH_QUERY_SET,
   payload: query,
@@ -77,3 +80,6 @@ export const fetchQuestionFailure = err => ({
   type: QUESTION_FETCH_FAILURE,
   payload: err,
 });
+
+export const selectNextRow = table => ({ type: NAVIGATE_ROW_NEXT, payload: table });
+export const selectPrevRow = table => ({ type: NAVIGATE_ROW_PREV, payload: table });
