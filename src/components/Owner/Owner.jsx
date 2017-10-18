@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Owner.css';
 
 const Owner = ({ owner, onClick }) => (
@@ -6,5 +7,10 @@ const Owner = ({ owner, onClick }) => (
     {owner.displayName}
   </span>
 );
+
+Owner.propTypes = {
+  owner: PropTypes.object,
+  onClick: PropTypes.func,
+};
 
 export default Owner;

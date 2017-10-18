@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cn from 'classnames';
 import './Row.css';
 
@@ -13,5 +14,11 @@ const Row = props => (
     ))}
   </tr>
 );
+
+Row.propTypes = {
+  isActive: PropTypes.bool,
+  onClick: PropTypes.func,
+  onMouseOver: PropTypes.func,
+};
 
 export default Row;

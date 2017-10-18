@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Panel from '../Panel/Panel';
 
 import './PreviewPane.css';
@@ -15,5 +16,10 @@ const PreviewPane = ({ title, children, onClose }) => (
     </div>
   </div>
 );
+
+PreviewPane.propTypes = {
+  title: PropTypes.string,
+  onClose: PropTypes.func,
+};
 
 export default PreviewPane;

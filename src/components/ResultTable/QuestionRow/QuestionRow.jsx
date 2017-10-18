@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
 import { Row } from '../../Table';
 import Tag from '../../Tag/Tag';
@@ -7,6 +8,17 @@ import Owner from '../../Owner/Owner';
 import './QuestionRow.css';
 
 class QuestionRow extends PureComponent {
+  static propTypes = {
+    owner: PropTypes.object,
+    title: PropTypes.string,
+    tags: PropTypes.arrayOf(PropTypes.string),
+    answerCount: PropTypes.number,
+    onClick: PropTypes.func,
+    isActive: PropTypes.bool,
+    onAuthorClick: PropTypes.func,
+    onTagClick: PropTypes.func,
+  };
+
   handleAuthorClick = (author, event) => {
     if (this.props.onAuthorClick) {
       this.props.onAuthorClick(author, event);

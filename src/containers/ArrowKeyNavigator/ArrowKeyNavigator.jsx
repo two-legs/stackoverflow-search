@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './ArrowKeyNavigator.css';
 
 export default class ArrowKeyNavigator extends Component {
+  static propTypes = {
+    onDownPress: PropTypes.func,
+    onUpPress: PropTypes.func,
+    onEnter: PropTypes.func,
+  };
+
   handleKeyDown = (event) => {
     switch (event.key) {
       case 'ArrowDown':

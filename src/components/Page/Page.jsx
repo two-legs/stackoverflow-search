@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Spinner from '../Spinner/Spinner';
 import { CSSTransition } from 'react-transition-group';
 
@@ -30,5 +31,9 @@ const Page = ({ isLoading, children }) => (
     </Fade>
   </div>
 );
+
+Page.propTypes = {
+  isLoading: PropTypes.bool,
+};
 
 export default Page;
