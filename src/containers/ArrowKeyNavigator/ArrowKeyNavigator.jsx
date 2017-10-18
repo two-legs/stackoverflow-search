@@ -13,6 +13,11 @@ export default class ArrowKeyNavigator extends Component {
           this.props.onUpPress();
         }
         break;
+      case 'Enter':
+        if (this.props.onEnter) {
+          this.props.onEnter();
+        }
+        break;
       default:
         break;
     }

@@ -7,21 +7,6 @@ import SortingHeader from '../Table/SortingHeader/SortingHeader';
 import './ResultTable.css';
 
 class ResultTable extends PureComponent {
-  componentDidUpdate() {
-    if (this.container && this.activeRef) {
-      const containerRect = this.container.getBoundingClientRect();
-      const activeItemRect = this.activeRef.getBoundingClientRect();
-
-      if (activeItemRect.bottom > containerRect.bottom) {
-        this.container.scrollTop += activeItemRect.height;
-      }
-
-      if (activeItemRect.top < containerRect.top) {
-        this.container.scrollTop -= activeItemRect.height;
-      }
-    }
-  }
-
   render() {
     const {
       headers,
@@ -34,10 +19,8 @@ class ResultTable extends PureComponent {
       activeIndex,
     } = this.props;
 
-    this.activeRef = null;
-
     return (
-      <div className="ResultTable" ref={(container) => { this.container = container; }}>
+      <div className="ResultTable">
         <Table>
           <HeaderRow>
             {headers.map(({field, caption}) => (
@@ -60,7 +43,6 @@ class ResultTable extends PureComponent {
                 onAuthorClick={onAuthorClick}
                 onClick={() => onRowClick({...question})}
                 isActive={index === activeIndex}
-                ref={(el) => { if (index === activeIndex) this.activeRef = el; }}
               />
             ))}
           </Rows>

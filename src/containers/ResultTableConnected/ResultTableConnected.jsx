@@ -13,6 +13,11 @@ class Table extends PureComponent {
     }
   };
 
+  handleEnterRow = () => {
+    const question = this.props.questions[this.props.activeIndex];
+    this.handleRowClick(question);
+  };
+
   render() {
     const {
       questions,
@@ -22,6 +27,7 @@ class Table extends PureComponent {
       name,
       onArrowUpPress,
       onArrowDownPress,
+      activeIndex,
       ...props,
     } = this.props;
 
@@ -30,6 +36,7 @@ class Table extends PureComponent {
       <ArrowKeyNavigator
         onUpPress={() => onArrowUpPress(name)}
         onDownPress={() => onArrowDownPress(name)}
+        onEnter={this.handleEnterRow}
       >
         <ResultTable
           headers={headers}
@@ -37,13 +44,17 @@ class Table extends PureComponent {
           onTagClick={onTagClick}
           onAuthorClick={onAuthorClick}
           onRowClick={this.handleRowClick}
+          activeIndex={activeIndex}
           {...props}
         />
       </ArrowKeyNavigator>
     ) : null;  }
 }
 
-const mapStateToProps = state => ({ headers: state.headers });
+const mapStateToProps = (state, ownProps) => ({
+  headers: state.headers,
+  activeIndex: state.navigate[ownProps.name] && state.navigate[ownProps.name].currentIndex,
+});
 
 const mapDispatchToProps = dispatch => ({
   onTagClick: tag => dispatch(getQuestionsByTag(tag)),

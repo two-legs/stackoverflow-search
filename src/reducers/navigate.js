@@ -16,25 +16,35 @@ const initialState = {
   },
 };
 
+const setNextIndex = (navState) => {
+  const { currentIndex, maxIndex } = navState;
+  const nextIndex = currentIndex === null ? 0 : currentIndex + 1;
+  return {
+    ...navState,
+    currentIndex: nextIndex < maxIndex ? nextIndex : currentIndex,
+  }
+};
+
+const setPrevIndex = (navState) => {
+  const { currentIndex, maxIndex } = navState;
+  const nextIndex = currentIndex === null ? maxIndex : currentIndex - 1;
+  return {
+    ...navState,
+    currentIndex: nextIndex >= 0 ? nextIndex : 0,
+  };
+};
+
 const navigate = (state = initialState, action) => {
   switch (action.type) {
     case NAVIGATE_ROW_NEXT:
-      const nextIndex = state.currentIndex === null ? 0 : state.currentIndex + 1;
       return {
         ...state,
-        [action.payload]: {
-          ...state[action.payload],
-          currentIndex: nextIndex < state.maxIndex ? nextIndex : state.currentIndex,
-        },
+        [action.payload]: setNextIndex(state[action.payload]),
       };
     case NAVIGATE_ROW_PREV:
-      const prevIndex = state.currentIndex === null ? state.maxIndex : state.currentIndex - 1;
       return {
         ...state,
-        [action.payload]: {
-          ...state[action.payload],
-          currentIndex: prevIndex >= 0 ? prevIndex : 0,
-        }
+        [action.payload]: setPrevIndex(state[action.payload]),
       };
     case SEARCH_RESULTS_FETCH_SUCCESS:
       return {

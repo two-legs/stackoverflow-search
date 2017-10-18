@@ -32,7 +32,7 @@ class QuestionRow extends PureComponent {
     } = this.props;
 
     return (
-      <Row onClick={onClick} isActive={isActive} ref={(row) => { this.rowContainer = row; }}>
+      <Row onClick={onClick} isActive={isActive}>
         <Owner owner={owner} onClick={this.handleAuthorClick}/>
         <div className="QuestionRow__title" dangerouslySetInnerHTML={{ __html: title}} />
         <div>{answerCount}</div>
