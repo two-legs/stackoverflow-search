@@ -1,0 +1,9 @@
+.SortingHeader {}
+.SortingHeader__icon {
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  vertical-align: middle;
+}

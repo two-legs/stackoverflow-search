@@ -1,0 +1,4 @@
+.ArrowKeyNavigator {}
+.ArrowKeyNavigator:focus {
+  outline: #eee auto 1px;
+}

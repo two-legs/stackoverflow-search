@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './ArrowKeyNavigator.css';
 
 export default class ArrowKeyNavigator extends Component {
   handleKeyDown = (event) => {
@@ -25,7 +26,7 @@ export default class ArrowKeyNavigator extends Component {
 
   render() {
     return (
-      <div onKeyDown={this.handleKeyDown} tabIndex="0">
+      <div onKeyDown={this.handleKeyDown} tabIndex="0" className="ArrowKeyNavigator">
         {this.props.children}
       </div>
     );
